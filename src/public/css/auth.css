@@ -1,0 +1,95 @@
+/* auth.css */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5; /* Тот же фон, что в чате */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.auth-container {
+    background-color: #ffffff;
+    width: 350px; /* Чуть уже, чем чат */
+    padding: 30px;
+    border-radius: 8px; /* Те же скругления */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тот же эффект тени */
+    text-align: center;
+}
+
+.auth-container h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    border-bottom: 1px solid #ddd; /* Линия как в шапке чата */
+    padding-bottom: 15px;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Отступ между полями */
+}
+
+.auth-form input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.auth-form input:focus {
+    border-color: #4a90e2; /* Синий цвет при фокусе */
+}
+
+.auth-form button {
+    padding: 12px;
+    background-color: #4a90e2; /* Твой синий цвет */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.auth-form button:hover {
+    background-color: #357abd; /* Эффект наведения как в чате */
+}
+
+.auth-footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}
+
+.auth-footer a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Красивый блок ошибки */
+.error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border: 1px solid #ef9a9a;
+    font-size: 14px;
+    text-align: left;
+}

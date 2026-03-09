@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="/css/chat.css">
+</head>
+
+
+<body>
+<div class="chat-container">
+
+    <div class="chat-header">
+        <h2>Chat</h2>
+        <p>Zalogowany jako: <strong id="username"><%= username %></strong></p>
+        <a href="/auth/logout">
+            <button id="logoutButton" type="button">Log out</button>
+        </a>
+    </div>
+
+    <div class="chat-messages">
+        <!-- Messages will be here -->
+        <ul id="messages">
+            <% messages.forEach(function(msg) { %>
+                <li class="<%= msg.userId === userId ? 'my-message' : 'other-message' %>">
+                    <strong><%= msg.username %>:</strong> <%= msg.text %>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+
+
+    <form class="chat-form" id="chatForm">
+        <input
+                type="text"
+                id="messageInput"
+                placeholder="Write your message here..."
+                required
+                maxlength="255"
+        >
+        <button type="submit">Send</button>
+    </form>
+
+</div>
+
+
+<% if (role === 'admin') { %>
+    <button id="clearMessagesBtn">Clear messages</button>
+<% } %>
+
+<!-- Socket.io client -->
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    const CURRENT_USER_ID = Number('<%= userId %>');
+</script>
+
+<script src="/js/chat.js"></script>
+
+</body>
+</html>

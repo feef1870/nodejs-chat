@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.chat-container {
+    width: 400px;
+    height: 500px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.message {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.chat-form {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+.chat-form input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+.chat-form button {
+    padding: 0 20px;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.chat-form button:hover {
+    background-color: #357abd;
+}
+
+.chat-messages ul {
+    list-style: none;
+    padding: 0;
+}
+
+.chat-messages li {
+    margin: 6px 0;
+    padding: 8px 12px;
+    border-radius: 8px;
+    max-width: 70%;
+}
+
+.my-message {
+    background-color: #dcf8c6;
+    margin-left: auto;
+    text-align: right;
+}
+
+.other-message {
+    background-color: #f1f1f1;
+    margin-right: auto;
+    text-align: left;
+}
+
+#clearMessagesBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#clearMessagesBtn:hover {
+    background-color: #e60000;
+}
+
+#logoutButton {
+    background-color: #757578;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#logoutButton:hover {
+    background-color: #5b5b5e;
+}
